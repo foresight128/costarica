@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "remonboldI";
+    src: url(../font/AnyConv.com__LEMONMILK-BoldItalic.woff) format("woff");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "remonbold";
+    src: url(../font/AnyConv.com__LEMONMILK-Bold.woff) format("woff");
+    font-weight: normal;
+}

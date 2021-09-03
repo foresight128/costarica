@@ -1,0 +1,282 @@
+/* common.css */
+a{
+    color:black ;
+}
+body{
+    font-size: 20px;
+    color:black;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+img,button,input,select{
+    vertical-align:middle;
+}
+img,iframe,fieldset{
+    border: 0;
+}
+table{
+    border-collapse: collapse;
+}
+.blind{
+    position:absolute;
+    top: -9999px;
+}
+.clearFix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* .skip */
+.skip a{
+    display:block;
+    line-height:2;
+    background:black;
+    color: white;
+    text-align: center;
+    position:absolute;
+    top:-9999px;
+    width:100%;
+}
+.skip a:focus{
+    top: 0;
+}
+/* style.css */
+.section{
+    overflow: hidden;
+    background-size: cover;
+}
+.slide{
+    background-size: cover;
+}
+#section1{
+    background-image: url(../images/bgimg.jpg);
+}
+
+/* menu */
+#menu li{
+    background: none;
+}
+#menu li.active{
+    background:none;
+}
+#menu li.active a{
+    color: #61a5c2;
+}
+#menu li a{
+    color:#89c2d9;
+    color: black;
+}
+#menu li a:hover,
+#menu li.active a:hover{
+    color: #61a5c2;
+}
+#menu li:hover{
+    background:none;
+}
+#fullpage{
+    position: relative;
+}
+
+/* section0 */
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black;
+    /* in case the video doesn't fit the whole page*/
+    /* background-image:
+        our video
+    ; */
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    /*cover video background */
+    z-index: 3;
+}
+#section0 .layer{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    top: 40%;
+    right: 5%;
+    -webkit-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+}
+#section0 .layer h1{
+    font-family: "remonboldI",sans-serif ;
+    text-align: right;
+    font-size: 5em;
+    color: #ade8f4;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+#section0 .layer h1 span{
+    color: #ade8f4;
+    font-size: 1.5em;
+}
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+/* section1 */
+#section1{
+    position: relative;
+}
+#section1 div{
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    width: 700px;
+}
+#section1 div p{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    color: white;
+    margin-top: 30px;
+    line-height: 1.2;
+    word-break: keep-all;
+}
+#section1 div .subTitle{
+    font-family: "remonbold", sans-serif;
+    font-size: 30px;
+    color: #90e0ef;
+}
+#section1 div p span{
+    color: #ade8f4;
+}
+
+/* section2 */
+#section2{
+    text-align: left;
+}
+#section2 .contentBox .left{
+    float: left;
+    width: 500px;
+    margin:170px 0 0 150px;
+    padding: 0 5px;
+}
+#section2 .contentBox .left .s2title{
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom:60px;
+    font-weight: 700;
+}
+#section2 .contentBox .left p{
+    font-size: 1rem;
+    margin-top: 30px;
+    word-break: keep-all;
+    line-height: 1.5;
+}
+#section2 .contentBox .right{
+    float: right;
+    margin-right: 150px;
+}
+
+/* 반응형 */
+@media screen and (max-width:1620px){
+    #section2 .contentBox .left{
+        width: 500px;
+        margin:120px 0 0 50px;
+    }
+    #section2 .contentBox .right{
+        margin-right: 50px;
+    }
+    #section2 .contentBox .right img{
+        width: 650px;
+    }
+}
+@media screen and (max-width:1280px){
+    #section0 .layer{
+        top: 50%;
+    }
+    #section0 .layer h1{
+        font-size: 5rem;
+    }
+    #section1 div{
+        width: 450px;
+    }
+    #section1 div p{
+        font-family: "M10", sans-serif;
+        font-size: 16px;
+        text-align: left;
+        color: white;
+        margin-top: 30px;
+        line-height: 1.2;
+    }
+    #section2 .contentBox .left{
+        width: 400px;
+        margin:80px 0 0 50px;
+    }
+    #section2 .contentBox .right img{
+        width: 50vw;
+    }
+}
+@media screen and (max-width:1024px){
+    #section2 .contentBox .left{
+        width: 270px;
+        margin:40px 0 0 50px;
+    }
+    #section2 .contentBox .left .s2title{
+        font-size: 1.5rem;
+        margin-bottom:50px;
+    }
+    #section2 .contentBox .left p{
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:767px){
+    #section0 .layer h1{
+        font-size: 3rem;
+    }
+    #section1 div{
+        width: 70vw;
+    }
+    #section1 div p{
+        font-family: "M10", sans-serif;
+        font-size: 13px;
+        text-align: left;
+        color: white;
+        margin-top: 30px;
+        line-height: 1.2;
+    }
+    #section1 div .subTitle{
+        font-family: "remonbold", sans-serif;
+        font-size: 18px;
+        color: #90e0ef;
+    }
+    #section2 .contentBox .left{
+        float: none;
+        width: 70vw;
+        margin:5vw 15vw;
+    }
+    #section2 .contentBox .left .s2title{
+        font-size: 1.5rem;
+        margin-bottom:20px;
+    }
+    #section2 .contentBox .right{
+        float: none;
+        margin:5vw 10vw;
+    }
+    #section2 .contentBox .right img{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:480px){
+    #menu li{
+        margin: 10px 0;
+    }
+    #menu li a{
+        font-size: 15px;
+    }
+    #section1 div{
+        width: 90vw;
+    }
+}
